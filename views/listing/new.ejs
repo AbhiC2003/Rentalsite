@@ -5,7 +5,7 @@
         <di class="col-8 offset-2">
             <br><br>
              <h3>Create New Listing</h3>
-    <form method="post" action="/listings" novalidate  class="needs-validation">
+    <form method="post" action="/listings" novalidate  class="needs-validation" enctype="multipart/form-data">
         <div class="mb-2">
             <label for="title" class="form-label">Enter title</label>
             <input name="listing[title]" placeholder="Enter title" type="text" class="form-control"   required><br>
@@ -22,10 +22,9 @@
                description should be valid 
             </div>
         </div>
-
         <div class="mb-2">
-            <label for="image" class="form-label"> image link</label>
-            <input name="listing[image]" placeholder="Enter image URL" type="text" class="form-control"><br>
+            <label for="image" class="form-label"> Upload image</label>
+            <input name="listing[image]"  type="file" class="form-control"><br>
         </div>
 
         <div class="mb-2">
